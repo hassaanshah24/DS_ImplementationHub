@@ -43,15 +43,7 @@ class SinglyLinkedList:
             slow = slow.next
         # Split the list into two halves
         prev.next = None
-
-        # Create two new lists for the two halves
-        first_half = SinglyLinkedList()
-        second_half = SinglyLinkedList()
-
-        first_half.head = self.head
-        second_half.head = slow
-
-        return first_half, second_half
+        return self.head, slow
 
     def split_even_odd(self):
         """Split the linked list into even and odd indexed nodes."""
